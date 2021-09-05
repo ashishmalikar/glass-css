@@ -1,0 +1,24 @@
+{
+  "name": "glass-css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -- watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashishmalikar/glass-css.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashishmalikar/glass-css/issues"
+  },
+  "homepage": "https://github.com/ashishmalikar/glass-css#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
