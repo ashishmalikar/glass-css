@@ -1,4 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 html, body {
   background-color: #d4d2cf;
   box-sizing: content-box;
+  // font-family: '', 'Poppins', sans-serif;
 }
+
+@import "./components/button/index.scss";
+@import "./components/card/index.scss";
+@import "./components/grid/index.scss";
