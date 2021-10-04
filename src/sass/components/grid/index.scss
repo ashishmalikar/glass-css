@@ -1,0 +1,12 @@
+.gls-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@for $i from 2 to 16 {
+  @for $j from 1 to $i {
+    .gls-col.gls-size__#{$j}-of-#{$i} {
+      width: #{($j/$i)*100+'%'};
+    }
+  }
+}
