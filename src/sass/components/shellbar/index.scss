@@ -1,0 +1,95 @@
+.gls-shellbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0rem 0em;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  background: #f0ebeb;
+  font-weight: normal;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+          box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+  min-height: 1.85714286em;
+}
+
+.gls-shellbar:after {
+  content: '';
+  display: block;
+  height: 0px;
+  clear: both;
+  visibility: hidden;
+}
+.gls-shellbar:first-child {
+  margin-top: 0rem;
+}
+.gls-shellbar:last-child {
+  margin-bottom: 0rem;
+}
+
+.gls-shellbar:not(.gls-vertical) .gls-shellbar-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gls-shellbar .gls-shellbar-item {
+  position: relative;
+  vertical-align: middle;
+  line-height: 1;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: none;
+  padding: 0.42857143em 0.64285714em;
+  text-transform: none;
+  color: rgba(190, 38, 38, 0.87);
+  font-weight: normal;
+  -webkit-transition: background 0.1s ease, color 0.1s ease, -webkit-box-shadow 0.1s ease;
+  transition: background 0.1s ease, color 0.1s ease, -webkit-box-shadow 0.1s ease;
+  transition: background 0.1s ease, box-shadow 0.1s ease, color 0.1s ease;
+  transition: background 0.1s ease, box-shadow 0.1s ease, color 0.1s ease, -webkit-box-shadow 0.1s ease;
+}
+
+.gls-shellbar > .gls-shellbar-item:first-child {
+  border-radius: 0.28571429rem 0px 0px 0.28571429rem;
+}
+
+/* Border */
+.gls-shellbar .gls-shellbar-item:before {
+  position: absolute;
+  content: '';
+  top: 0%;
+  right: 0px;
+  height: 100%;
+  width: 1px;
+  background: rgba(34, 36, 38, 0.1);
+}
+
+/*--------------
+  Text Content
+---------------*/
+
+.gls-shellbar .gls-shellbar-item > *,
+.gls-shellbar .gls-shellbar-item > a:not(.ui),
+.gls-shellbar .gls-shellbar-item > p:only-child {
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+  line-height: 1.3;
+}
+.gls-shellbar .gls-shellbar-item > p:first-child {
+  margin-top: 0;
+}
+.gls-shellbar .gls-shellbar-item > p:last-child {
+  margin-bottom: 0;
+}
