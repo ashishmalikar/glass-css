@@ -1,9 +1,16 @@
 .gls-grid {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  position: relative;
 }
 
-@for $i from 2 to 16 {
+.gls-grid .gls-col {
+  display: flexbox;
+  position: relative;
+}
+
+@for $i from 2 to 17 {
   @for $j from 1 to $i {
     .gls-col.gls-size__#{$j}-of-#{$i} {
       width: #{($j/$i)*100+'%'};

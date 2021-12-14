@@ -1,0 +1,57 @@
+.gls-search {
+  position: relative;
+  display: inline-block;
+}
+
+.gls-search input {
+  border: solid 2px rgba(31, 23, 23, 0.384);
+  border-radius: 5px;
+  line-height: 1.5;
+  font-size: 16px;
+  margin: 0.4em;
+}
+
+.gls-search input:focus {
+  outline: none;
+}
+
+.gls-search.gls-fluid input {
+  width: 100%;
+}
+
+.gls-search .result {
+  background-color: white;
+  min-height: 10vh;
+  border-radius: 7px;
+}
+
+.gls-search .gls-input i {
+  cursor: default;
+  position: absolute;
+  line-height: 1;
+  text-align: center;
+  top: 0px;
+  right: 0px;
+  margin: 0em;
+  height: 100%;
+  width: 2.67142857em;
+  opacity: 0.5;
+  border-radius: 0em 0.28571429rem 0.28571429rem 0em;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.gls-search .gls-input input {
+  padding-right: 2.67142857em !important;
+}
+
+.gls-search .gls-input :before,
+.gls-search .gls-input :after {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+  margin-top: -0.5em;
+}
+/*# sourceMappingURL=index.css.map */

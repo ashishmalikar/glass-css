@@ -1,0 +1,34 @@
+.gls-modal {
+  position: absolute;
+  z-index: 1001;
+  text-align: left;
+  background: #FFFFFF;
+  border: none;
+  -webkit-box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.2), 1px 3px 15px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.2), 1px 3px 15px 2px rgba(0, 0, 0, 0.2);
+  -webkit-transform-origin: 50% 25%;
+  transform-origin: 50% 25%;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  border-radius: 0.28571429rem;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+  will-change: top, left, margin, transform, opacity;
+}
+
+.gls-modal.gls-active {
+  display: block;
+}
+
+.gls-modal .gls-content {
+  display: block;
+  width: 100%;
+  font-size: 1em;
+  line-height: 1.4;
+  padding: 1.5rem;
+  background: #FFFFFF;
+}
+/*# sourceMappingURL=modal.css.map */

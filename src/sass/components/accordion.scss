@@ -1,0 +1,100 @@
+.gls-accordion {
+  border: solid rgba(240, 234, 234, 0.486) 1px;
+  min-height: 10vh;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  transition: all 500ms;
+  // background: transparent;
+  // backdrop-filter: blur(10px) saturate(0.5);
+
+  & .gls-accordion-item-title {
+    background: transparent;
+    backdrop-filter: blur(20px) saturate(0.1);
+    color: white;
+  }
+
+  & .gls-accordion-item-content {
+    background: transparent;
+    backdrop-filter: blur(15px) saturate(0.5);
+    color: white;
+  }
+  
+
+  &.gls-raised {
+    box-shadow: 0px 0px 10px 1px rgba(22, 22, 22, 0.486);
+  }
+
+  .gls-inverted {
+    & > .gls-accordion-item-title {
+      // background-color: black !important;
+    }
+  }
+
+  & .gls-accordion-item {
+    transition: all 500ms;
+    &:not(.gls-active) .gls-accordion-item-content {
+      display: none;
+    }
+  }
+  
+}
+
+.gls-accordion {
+  .gls-accordion-item:not(:last-child) {
+    border-bottom: solid rgba(190, 186, 186, 0.664) 1px;
+  }
+
+  .gls-accordion-item:first-child {
+
+    & .gls-accordion-item-title:first-child {
+      border-radius: 11px 11px 0px 0px;
+    }
+  }
+
+  & > .gls-accordion-item:last-child {
+    & .gls-accordion-item-title,
+    .gls-accordion-item-content {
+      border-radius: 0px 0px 11px 11px;
+    }
+  }
+
+  // & > .gls-accordion-item {
+  //   & > .gls-accordion-item-title {
+  //     cursor: pointer;
+  //     // background-color: rgba(211, 208, 203, 0.801);
+  //     backdrop-filter: blur(10px) saturate(0.1) !important;
+  //     background: transparent;
+  //     &:hover {
+  //       background-color: rgba(160, 158, 155, 0.801);
+  //     }
+  //   }
+
+  // }
+}
+
+.gls-accordion .gls-accordion-item {
+  
+  .gls-accordion-item-title, 
+  .gls-accordion-item-content {    
+    padding: 0.6em 0.5em;
+  }
+
+//   .gls-accordion-item-title {
+//     // background-color: #a09e9ebd;
+//     // backdrop-filter: blur(5px);
+//     display: flex;
+//   }
+
+//   .gls-accordion-item-content {    
+//     padding: 0.6em 0.5em;
+//     transition: all 500ms;
+//     // background-color: #f5f4f183;
+//     // backdrop-filter: blur(5px);
+//     // box-shadow: inset 0px 0px 2px 1px rgba(22, 22, 22, 0.486);
+//   }
+}
+
+
+
+

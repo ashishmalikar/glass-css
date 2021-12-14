@@ -1,0 +1,25 @@
+.gls-overlay {
+  position: fixed;
+  z-index: 12111;
+  /* top: 0; */
+  left: 0;
+  /* height: 100%; */
+  /* width: 100%; */
+  display: flex;
+  display: none;
+
+  &:is(.gls-is-active) {
+    display: flex;
+  }
+  
+  & > .gls-content {
+    margin: .21rem;
+    min-height: 10vh;
+    min-width: 40vw;
+    background-color: rgba(240, 232, 232, 0.911);
+    border-radius: 0.5rem;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 0 10px 2px black;
+    padding: 10px;
+  }
+}
