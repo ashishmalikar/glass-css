@@ -1,0 +1,40 @@
+$ns: gls;
+
+// variables
+$light-background-color: rgb(247, 242, 242);
+$box-border-radius: 0.5em;
+$primary-color: blue;
+
+.#{$ns}-calendar {
+  background-color: rgb(247, 242, 242);
+  height: inherit;
+  margin: 3px;
+  border-radius: $box-border-radius;
+  box-shadow: 0 0 15px 2px rgba(0,0,0,.57);
+
+  & > .gls-calendar-header {
+    height: 5vh;
+    border-bottom: solid rgba(94, 89, 89, 0.466) 1px;
+    display:flex;
+    width: 100%;
+
+    & > .gls-calendar-header-title {
+      display: block;
+      color: $primary-color;
+      // margin-top: 50%;
+      vertical-align: middle;
+      padding: 1em;
+      font-weight: 800;
+    }
+    & > .gls-calendar-header-actions {
+      display: block;
+      margin-left: auto;
+      padding: .21em;
+    }
+  }
+
+  & > .gls-calendar-month-table {
+    width: 100%;
+    background-color: red;
+  }
+}

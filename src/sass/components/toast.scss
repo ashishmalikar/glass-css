@@ -1,0 +1,75 @@
+@import "../constants.scss";
+
+$ns: $ds-namespace;
+
+/**
+<div class="gls-toast">
+  <div class="gls-content">
+    <div class="gls-close-action">
+      <i class="fas fa-times"></i>
+    </div>
+    <div class="gls-toast-msg">
+      Record Created successfully <a href="javascript:void(0)">Click Here</a> to navigate record.
+    </div>
+  </div>
+</div>
+*/
+
+$block: #{$ns}-toast;
+
+// color schemas 
+$success-toast-background-color: green;
+$info-toast-background-color: #276f86;
+$warning-toast-background-color: #fffaf3;
+$error-toast-background-color: #9f3a38;
+
+.#{$block} {
+  width: 500px;
+  position: fixed;
+  z-index: 1002;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  background-color: #e5e4e2;
+  border-radius: 0.5rem;
+  border: solid black 1px;
+  display: none;
+
+  &:is(.gls-is-active) {
+    display: block;
+  }
+
+  &:is(.gls-is-success) {
+    background-color: $success-toast-background-color;
+  }
+  &:is(.gls-is-info) {
+    background-color: $info-toast-background-color;
+  }
+  &:is(.gls-is-warning) {
+    background-color: $warning-toast-background-color;
+  }
+  &:is(.gls-is-error) {
+    background-color: $error-toast-background-color;
+    color: white;
+  }
+
+  & .gls-content {
+    display: flex;
+    flex-direction: column;
+    border-radius: inherit;
+    box-shadow: 0 0 10px 2px rgba(65, 64, 64, 0.705);
+    height: 4rem;
+    
+  }
+  & .gls-toast-msg {
+    /* padding: 0.2rem 1rem; */
+    margin: auto;
+    font-size: 18px;
+  }
+  & .gls-close-action {
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    margin-top: 0px;
+  }
+}

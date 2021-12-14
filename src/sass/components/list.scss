@@ -1,0 +1,50 @@
+@import "../constants.scss";
+
+$ns: gls;
+
+.#{$ns}-list {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: $box-border-radius;
+  border: solid rgba(128, 128, 128, 0.678) 1px;
+  width: max-content;
+  // padding: 0.53em;
+  padding: 0px;
+  width: 238px;
+  
+  &:is(.gls-is-fluid) {
+    width: 100%;
+  }
+
+  & > .gls-item {
+    display: block;
+    padding: 0.5em;
+    margin-left: .2em;
+    margin-right: .2em;
+    border-bottom: solid 1px rgba(128, 128, 128, 0.678);
+    // border-radius: $box-border-radius;
+    border-radius: 0px;
+
+    &:last-child {
+      border-bottom: none;
+      border-bottom-left-radius: $box-border-radius;
+      border-bottom-right-radius: $box-border-radius;
+    }
+
+    &:first-child {
+      // border-radius: $box-border-radius;
+      border-top: none;
+      border-top-left-radius: $box-border-radius;
+      border-top-right-radius: $box-border-radius;
+    }
+
+    &:is(li) {
+      list-style: none;
+      cursor: pointer;
+      &:hover {
+        background-color: whitesmoke;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.gls-action-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 12px;
+  border: solid 1px rgba(0, 0, 0, 0.534);
+  -webkit-box-shadow: 1px 1px 15px 2px rgba(59, 59, 59, 0.384);
+          box-shadow: 1px 1px 15px 2px rgba(59, 59, 59, 0.384);
+  background-color: #e6e5e2;
+}
+
+.gls-action-bar > .gls-btn {
+  display: block;
+  height: 20px;
+}
+
+.gls-action-bar.gls-back-action {
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
+  line-height: 1;
+  width: 1em;
+  border-radius: 12px 0px 0px 12px;
+  padding: 0.2em;
+  vertical-align: middle;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  display: inline-block;
+}
+
+.gls-action-bar.gls-back-action:hover {
+  background-color: #b3adad;
+}
+
+.gls-action-bar .gls-action-bar-title {
+  font-size: 24px;
+  margin: 0.3em 0.5em;
+}
+
+.gls-action-bar .gls-action-bar-title .gls-action-bar-sub-title {
+  font-size: 14px;
+  margin: 0.1em 0em;
+  color: rgba(59, 59, 59, 0.445);
+}
+
+.gls-action-bar .gls-action-bar-right-menu {
+  margin-left: auto;
+}
+
+.gls-action-bar .gls-action-bar-right-menu .gls-action-bar-right-menu-item {
+  padding: 0.3em .7em;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+/*# sourceMappingURL=action-bar.css.map */

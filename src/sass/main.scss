@@ -1,14 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Work+Sans&display=swap');
+@import url('http://fonts.cdnfonts.com/css/segoe-ui-4?styles=18006');
+@import url('http://fonts.cdnfonts.com/css/segoe-s?styles=66034');
+@import url('http://fonts.cdnfonts.com/css/segoe-sd');
+@import url('http://fonts.cdnfonts.com/css/segoe-wp-n');
 
 html, body {
-  background-color: #b7b7bd;
+  // background-color: #b7b7bd;
   box-sizing: content-box;
-  // font-family: '', 'Poppins', sans-serif;
+  // font-family: 'Work Sans',ans-serif;
+  // font-family: 'Open-sans', sans-serif;
+  // font-family: 'Roboto', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
+  // font-family: 'Segoe WP N', sans-serif;
+  // font-family: 'Segoe S', sans-serif;
+  // font-family: 'Segoe SD', sans-serif;
   margin: 0px;
   padding: 0px;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+h1,h2,h3,h4,h5,h6 {
+  padding: 0;
+  margin: 0;
 }
 
-@import "./components/button/index.scss";
-@import "./components/card/index.scss";
+@import "./components/accordion.scss";
+@import "./components/action-bar.scss";
+@import "./components/alert.scss";
+@import "./components/breadcrumb.scss";
+@import "./components/button.scss";
+@import "./components/container.scss";
+@import "./components/card.scss";
+@import "./components/dropdown/index.scss";
+@import "./components/form.scss";
 @import "./components/grid/index.scss";
-@import "./components/shellbar/index.scss"
+@import "./components/input.scss";
+@import "./components/menu.scss";
+@import "./components/modal.scss";
+@import "./components/search/index.scss";
+@import "./components/segment.scss";
+@import "./components/shellbar.scss";
+@import "./components/table.scss";
+@import "./components/tab/index.scss";
+@import "./components/tree.scss";
+@import "./components/header.scss";
+@import "./components/spinner.scss";
+
+@import "./components/time-picker.scss";
+@import "./components/calendar.scss";
+@import "./components/calendar2.scss";
+
+@import "./components/dropdown-2.scss";
+
+// @import "./components/icon.scss"
+
+// Importing icons
+@import "../iconfont/tabler-icons.scss";
+
+@import "./components/list.scss";
+@import "./components/pagination.scss";
+@import "./components/overlay.scss";
+@import "./components/toast.scss";
+
+
+
+
+

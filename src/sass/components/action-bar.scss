@@ -1,0 +1,57 @@
+@import "../constants.scss";
+
+.gls-action-bar {
+  display: flex;
+  border-radius: $border-radius;
+  border: $box-solid-border;
+  box-shadow: $box-shadow-light;
+  background-color: $background-gray;
+
+  & > .gls-btn {
+    display: block;
+    height: 20px;
+  }
+  
+  &.gls-back-action {
+    // border: $box-solid-border;
+    border: none;
+    // margin: -1px;
+    cursor: pointer;
+    font-size: 28px;
+    line-height: 1;
+    width: 1em;
+    border-radius: 12px 0px 0px 12px;
+    padding: 0.2em;
+    vertical-align: middle;
+    box-shadow: none;
+    display: inline-block;
+    &:hover{
+      background-color: #b3adad;
+      // border: solid rgba(0, 0, 0, 0.486) 1px;
+    }
+    &:after {
+      // border-right: solid black 1px;
+    }
+  }
+
+  .gls-action-bar-title {
+    font-size: 24px;
+    margin: 0.3em 0.5em;  
+    .gls-action-bar-sub-title {
+      font-size: 14px;
+      margin:  0.1em 0em;
+      color: rgba(59, 59, 59, 0.445);
+    }
+  }
+
+  .gls-action-bar-right-menu {
+    margin-left: auto;
+    .gls-action-bar-right-menu-item {
+      padding: 0.3em .7em;  
+      display: inline-block;
+      vertical-align: middle;
+      line-height: normal;
+    }
+  }
+  
+}

@@ -1,0 +1,77 @@
+.gls-accordion {
+  border: solid rgba(49, 48, 48, 0.486) 1px;
+  min-height: 10vh;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.gls-accordion.gls-raised {
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(22, 22, 22, 0.486);
+          box-shadow: 0px 0px 10px 1px rgba(22, 22, 22, 0.486);
+}
+
+.gls-accordion .gls-inverted > .gls-accordion-item-title {
+  background-color: black !important;
+}
+
+.gls-accordion .gls-accordion-item {
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.gls-accordion .gls-accordion-item:not(.gls-active) .gls-accordion-item-content {
+  display: none;
+}
+
+.gls-accordion .gls-accordion-item:not(:last-child) {
+  border-bottom: solid rgba(190, 186, 186, 0.664) 1px;
+}
+
+.gls-accordion .gls-accordion-item:first-child .gls-accordion-item-title:first-child {
+  border-radius: 11px 11px 0px 0px;
+}
+
+.gls-accordion .gls-accordion-item:last-child .gls-accordion-item-title,
+.gls-accordion .gls-accordion-item:last-child .gls-accordion-item-content {
+  border-radius: 0px 0px 11px 11px;
+}
+
+.gls-accordion .gls-accordion-item .gls-accordion-item-title {
+  cursor: pointer;
+}
+
+.gls-accordion .gls-accordion-item .gls-accordion-item-title:hover {
+  background-color: rgba(160, 158, 155, 0.801);
+}
+
+.gls-accordion .gls-accordion-item .gls-accordion-item-title,
+.gls-accordion .gls-accordion-item .gls-accordion-item-content {
+  padding: 0.6em 0.5em;
+}
+
+.gls-accordion .gls-accordion-item .gls-accordion-item-title {
+  background-color: #a09e9ebd;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gls-accordion .gls-accordion-item .gls-accordion-item-content {
+  padding: 0.6em 0.5em;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  background-color: #f5f4f183;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+/*# sourceMappingURL=accordion.css.map */

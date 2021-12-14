@@ -1,0 +1,24 @@
+.gls-segment {
+  position: relative;
+  z-index: 1;
+  background: #e5e4e2c5;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  z-index: 1;
+  margin: .4em;
+  border-radius: 12px;
+  border: 1px solid rgba(34, 36, 38, 0.555);
+  min-height: 3em;
+  padding: 0.2em;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.39), 0px 2px 10px 0px rgba(34, 36, 38, 0.39);
+  box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.39), 0px 2px 10px 0px rgba(34, 36, 38, 0.39);
+}
+
+.gls-segment:first-child {
+  margin-top: 0em;
+}
+
+.gls-segment:last-child {
+  margin-bottom: 0em;
+}
+/*# sourceMappingURL=segment.css.map */

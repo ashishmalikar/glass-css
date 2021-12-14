@@ -3,13 +3,35 @@
   display: -ms-flexbox;
   display: flex;
   margin: 0rem 0em;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  background: #f0ebeb;
+  background: rgba(255, 255, 255, 0.65);
   font-weight: normal;
   border: 1px solid rgba(34, 36, 38, 0.15);
-  -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
-          box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+  -webkit-box-shadow: 0px 3px 14px 4px rgba(34, 36, 38, 0.637);
+          box-shadow: 0px 3px 14px 4px rgba(34, 36, 38, 0.637);
   min-height: 1.85714286em;
+  border-radius: 0px 0px 8px 8px;
+  z-index: 1001;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(150px) saturate(180%);
+  color: rgb(37, 36, 36);
+
+  & * {
+    color: black;
+  }
+
+  &:is(.gls-theme-dark){
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    color: white;
+    box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.39), 0 0 2px 0px rgba(255, 255, 255, 0.685);
+
+    & * {
+      color: white !important; 
+    }
+  }
+  
 }
 
 .gls-shellbar:after {
@@ -26,7 +48,7 @@
   margin-bottom: 0rem;
 }
 
-.gls-shellbar:not(.gls-vertical) .gls-shellbar-item {
+.gls-shellbar:not(.gls-vertical) > .gls-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,7 +57,8 @@
           align-items: center;
 }
 
-.gls-shellbar .gls-shellbar-item {
+.gls-shellbar > * .gls-item,
+.gls-shellbar > .gls-item  {
   position: relative;
   vertical-align: middle;
   line-height: 1;
@@ -51,20 +74,25 @@
   background: none;
   padding: 0.42857143em 0.64285714em;
   text-transform: none;
-  color: rgba(190, 38, 38, 0.87);
+  // color: rgba(0, 0, 0, 1);
   font-weight: normal;
   -webkit-transition: background 0.1s ease, color 0.1s ease, -webkit-box-shadow 0.1s ease;
   transition: background 0.1s ease, color 0.1s ease, -webkit-box-shadow 0.1s ease;
   transition: background 0.1s ease, box-shadow 0.1s ease, color 0.1s ease;
   transition: background 0.1s ease, box-shadow 0.1s ease, color 0.1s ease, -webkit-box-shadow 0.1s ease;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+    background: #7c7c7c;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+  }
 }
 
-.gls-shellbar > .gls-shellbar-item:first-child {
-  border-radius: 0.28571429rem 0px 0px 0.28571429rem;
-}
-
-/* Border */
-.gls-shellbar .gls-shellbar-item:before {
+// /* Border */
+.gls-shellbar.gls-with-border > .gls-item:before {
   position: absolute;
   content: '';
   top: 0%;
@@ -78,18 +106,23 @@
   Text Content
 ---------------*/
 
-.gls-shellbar .gls-shellbar-item > *,
-.gls-shellbar .gls-shellbar-item > a:not(.ui),
-.gls-shellbar .gls-shellbar-item > p:only-child {
+.gls-shellbar > .gls-item > *,
+.gls-shellbar > .gls-item > a:not(.ui),
+.gls-shellbar > .gls-item > p:only-child {
   -webkit-user-select: text;
      -moz-user-select: text;
       -ms-user-select: text;
           user-select: text;
   line-height: 1.3;
 }
-.gls-shellbar .gls-shellbar-item > p:first-child {
+.gls-shellbar > .gls-item > p:first-child {
   margin-top: 0;
 }
-.gls-shellbar .gls-shellbar-item > p:last-child {
+.gls-shellbar > .gls-item > p:last-child {
   margin-bottom: 0;
+}
+
+.gls-shellbar .gls-right-menu {
+  margin-left: auto;
+  display: flex;
 }
