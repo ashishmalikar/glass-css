@@ -24,44 +24,50 @@ html, body {
   font-size: 16px;
   line-height: 1.5em;
 }
+
 h1,h2,h3,h4,h5,h6 {
   padding: 0;
   margin: 0;
 }
 
+a:not(.gls-icon), a *:not(.gls-icon) {
+  color: black;
+  text-decoration: none;
+
+  &:not(.gls-icon):hover {
+    text-decoration:underline;
+  }
+}
+
 @import "./components/accordion.scss";
-@import "./components/action-bar.scss";
 @import "./components/alert.scss";
 @import "./components/breadcrumb.scss";
 @import "./components/button.scss";
 @import "./components/container.scss";
 @import "./components/card.scss";
-@import "./components/dropdown/index.scss";
+@import "./components/dropdown.scss";
 @import "./components/form.scss";
-@import "./components/grid/index.scss";
+@import "./components/grid.scss";
 @import "./components/input.scss";
 @import "./components/menu.scss";
 @import "./components/modal.scss";
-@import "./components/search/index.scss";
+@import "./components/search.scss";
 @import "./components/segment.scss";
 @import "./components/shellbar.scss";
 @import "./components/table.scss";
-@import "./components/tab/index.scss";
+@import "./components/tab.scss";
 @import "./components/tree.scss";
 @import "./components/header.scss";
 @import "./components/spinner.scss";
-
 @import "./components/time-picker.scss";
 @import "./components/calendar.scss";
 @import "./components/calendar2.scss";
-
 @import "./components/dropdown-2.scss";
 
 // @import "./components/icon.scss"
 
 // Importing icons
-@import "../iconfont/tabler-icons.scss";
-
+@import "../iconfont/tabler-icons-2.scss";
 @import "./components/list.scss";
 @import "./components/pagination.scss";
 @import "./components/overlay.scss";

@@ -2,8 +2,10 @@
 
 // Variant color scope declarations
 $variant-default-color: #cdd7e0;
-$variant-primary-color: rgb(49, 94, 192);
+// $variant-primary-color: rgb(49, 94, 192);
+$variant-primary-color: #2e5090;
 $variant-primary-color-hover: rgb(39, 68, 129);
+// $variant-primary-bg-color: #2e5090;
 $variant-error-color: rgb(177, 48, 59);
 $variant-secondary-color: rgba(44, 43, 53, 0.877);
 
@@ -16,7 +18,7 @@ $button-group-border-radius: 5px;
   font-family: var(--sapFontFamily, "72", "72full", Arial, Helvetica, sans-serif);
   box-shadow: $box-shadow-light;
   // // border-radius: $border-radius;
-  border-radius: $button-border-radius;
+  border-radius: $border-radius;
   // border-width: 1px;
   padding: .6em .9em;
   // cursor: pointer;
