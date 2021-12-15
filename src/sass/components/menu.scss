@@ -1,17 +1,22 @@
-.gls-menu {
+@import "../constants.scss";
+
+$ns: $ds-namespace;
+$block: #{$ns}-menu;
+
+.#{$block} {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   
   background-color: rgba(255,255,255, 0.65);
   min-height: 2em;
-  border-radius: 0.5rem;
+  border-radius: $border-radius;
   margin: 0.2em;
   backdrop-filter: blur(2px);
 
   box-shadow: 0px 0px 10px 1px rgba(22, 22, 22, 0.521);
   backdrop-filter: blur(150px) saturate(180%);
-  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(1w0px) saturate(180%);
   
   background-color: rgba(255, 255, 255, 0.65);
   border: 1px solid rgba(209, 213, 219, 0.3);
@@ -36,7 +41,7 @@
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     background-color: rgba(17, 25, 40, 0.75);
-    border-radius: 12px;
+    border-radius: $border-radius;;
     border: 1px solid rgba(255, 255, 255, 0.125);
     color: white;
     & > .gls-item {
@@ -94,7 +99,7 @@
 // .gls-menu .gls-item a:hover,
 // .gls-menu a.gls-item:hover {
 //   background-color: #e5e4e2ab; 
-//   border-radius: 7px;
+//   border-radius: $border-radius;
 // }
 
 .gls-menu > .gls-item:first-child {
@@ -357,19 +362,18 @@
 /* Vertical Active */
 .gls-menu .gls-is-active.gls-item {
   background: rgba(0, 0, 0, 0.342);
-  // border-radius: inh;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
 .gls-menu.gls-vertical > .gls-is-active.gls-item:first-child {
-  border-radius: 0.28571429rem 0.28571429rem 0em 0em;
+  border-radius: $border-radius $border-radius 0em 0em;
 }
 .gls-menu.gls-vertical > .gls-is-active.gls-item:last-child {
   border-radius: 0em 0em 0.28571429rem 0.28571429rem;
 }
 .gls-menu.gls-vertical > .gls-is-active.gls-item:only-child {
-  border-radius: 0.28571429rem;
+  border-radius: $border-radius;
 }
 .gls-menu.gls-vertical .gls-is-active.gls-item .menu .gls-is-active.gls-item {
   border-left: none;

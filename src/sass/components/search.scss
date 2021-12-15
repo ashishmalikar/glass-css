@@ -1,0 +1,92 @@
+@import "../constants.scss";
+
+$ns: $ds-namespace;
+
+$block: #{$ns}-search;
+
+.#{$block} {
+  position: relative;
+  display: inline-block;
+
+  & input {
+    border-radius: $border-radius;
+    line-height: 1.5;
+    font-size: 16px;
+    // padding: 0.3em 0.6em;
+    margin: 0.4em;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &.gls-fluid input{
+    width: 100%
+  }
+
+  & > .gls-result {
+    position: absolute;
+    background-color: rgb(250, 244, 244);
+    min-height: 10vh;
+    border-radius: 7px;
+    width: 102.4%;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 0 10px 2px rgba($color: black, $alpha: .80);
+
+    & > .gls-item {
+      padding: .4em;
+      border-bottom: olive solid 1px;
+      // background-color: red;
+      cursor: pointer;
+      &:hover {
+        background-color: olive;
+      }
+
+      &:is(:first-child) {
+        border-top-left-radius: 00.4rem;
+        border-top-right-radius: 00.4rem;
+      }
+      &:is(:last-child) {
+        border-bottom-left-radius: 00.4rem;
+        border-bottom-right-radius: 00.4rem;
+      }
+    }
+  }
+
+  .gls-input {
+    i {
+      cursor: default;
+        position: absolute;
+        line-height: 1;
+        text-align: center;
+        top: 0px;
+        right: 0px;
+        margin: 0em;
+        height: 100%;
+        width: 2.67142857em;
+        opacity: 0.5;
+        border-radius: 0em 0.28571429rem 0.28571429rem 0em;
+        -webkit-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+    }
+    input {
+      padding-right: 2.67142857em !important;
+    }
+
+    :before, 
+    :after {
+      left: 0;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      width: 100%;
+      margin-top: -0.5em;
+    }
+  }
+}
+
+// .gls-search .gls-input input {
+//   border: solid 2px red;
+//     border-radius: 50%;
+// }

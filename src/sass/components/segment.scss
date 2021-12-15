@@ -1,6 +1,10 @@
+@import "../constants.scss";
+
+$ns: $ds-namespace;
+
 .gls-segment {
   position: relative;
-  border-radius: 0.5rem;
+  border-radius: $border-radius;
   padding: 1em;
 
   -webkit-box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.39), 0px 2px 10px 0px rgba(240, 243, 247, 0.39);

@@ -1,4 +1,4 @@
-import { dropdown } from "./sass/components/dropdown";
+import { dropdown } from "./js/dropdown";
 import { Accordion } from "./js/Accordion";
 
 // export { $Gls.Calendar } from "./sass/components/calendar"

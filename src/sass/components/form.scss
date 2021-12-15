@@ -29,6 +29,10 @@ $block: #{$ns}-form;
       text-transform: none;
     }
 
+    & input, textarea {
+      border-radius: $border-radius;
+    }
+
     & textarea,
     & input:not([type]),
     & input[type="date"],
@@ -66,21 +70,17 @@ $block: #{$ns}-form;
     & input[type="text"],
     & input[type="file"],
     & input[type="url"] {
-      // font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
       margin: 0em;
       outline: none;
       -webkit-appearance: none;
       tap-highlight-color: rgba(255, 255, 255, 0);
-      // line-height: 2.21428571em;
-      // padding: 0.37857143em .581em;
       line-height: 1.8rem;
       font-size: 1em;
       background: #FFFFFF;
-      // border: 1px solid rgba(34, 36, 38, 0.616);
       border: none;
       box-shadow: 0 0 1px 0 black;
       color: rgba(0, 0, 0, 0.87);
-      border-radius: 4px;
+      border-radius: 0.28571429rem;
       // -webkit-box-shadow: 0em 0em 0em 0em transparent inset;
       //         box-shadow: 0em 0em 0em 0em transparent inset;
       -webkit-transition: color 0.1s ease, border-color 0.1s ease;
