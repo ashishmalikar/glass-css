@@ -1,5 +1,33 @@
+@import "../constants.scss";
+
 $ns: gls;
 
-@each $var in list {
-  
+$font-sizes: 12 14 16 18 20 24 28 32 36 40;
+
+@each $size in $font-sizes {
+  .gls-t-#{$size} {
+    font-size: #{$size}px;
+  }
+
+  @each $name, $breakpoint in $breakpoints {
+    @media(min-width: $breakpoint) {
+      .gls-t-#{$size}\@#{$name} {
+        font-size: #{$size}px;
+      }
+    }
+  }
+}
+
+@for $i from 1 through 200 {
+  .gls-m-#{$i}-px {
+    font-size: #{$i}px;
+  }
+
+  @each $name, $breakpoint in $breakpoints {
+    @media(min-width: $breakpoint) {
+      .gls-m-#{$i}\@#{$name}-px {
+        font-size: #{$i}px;
+      }
+    }
+  }
 }

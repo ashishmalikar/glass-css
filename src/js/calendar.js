@@ -1,7 +1,7 @@
 /*!
- * TOAST UI Date Picker
+ * Glass UI Date Picker
  * @version 4.3.1
- * @author NHN. FE Development Lab <dl_javascript@nhn.com>
+ * @author Haasts corp. <ashish.malikar@haastscorp.com>
  * @license MIT
  */
 (function webpackUniversalModuleDefinition(root, factory) {

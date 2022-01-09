@@ -1,6 +1,6 @@
-export function Accordion () {
+export function Accordion (sel) {
 
-  Jui.select("#accordion .gls-accordion-item-title")
+  Jui.select(sel)
      .click(event=>{
        console.log('Click handled')
      })

@@ -1,38 +1,57 @@
 .gls-alert {
   margin: 1em;
-  border: solid 1px rgba(49, 46, 46, 0.7);
-  padding: 0.5em 1em;
-  border-radius: 12px;
-  background-color: rgba(88, 84, 84, 0.91);
+  // border: solid 1px rgba(49, 46, 46, 0.7);
+  padding: 1em 1em;
+  border-radius: 0.5rem;
+  background-color: rgba(88, 84, 84, 0.50);
+  backdrop-filter: blur(8px) saturate(50%);
   line-height: 1;
   min-width: 412px;
-  box-shadow: 0px 0px 10px 2px rgba(22, 22, 22, 0.507);
-  // position: absolute;
-  // top: 0;
-  // right: 0;
-  // display: inline-block;
-
+  box-shadow: 0 0 2px 0 black;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: white;
 
   &.gls-success {
-    // border-color: rgba(182, 170, 3, 0.8);
-    background-color: rgba(3, 182, 3, .91);
+    background-color: rgba(0, 255, 0, 0.50);
+    color: black;
   }
 
   &.gls-warning {
-    // border-color: rgba(182, 170, 3, 0.8);
-    stroke: yellow;
-    outline: yellow;
-    background-color: rgba(182, 170, 3, 0.91);
+    background-color: rgba(182, 170, 3, 0.50);
+    color: black;
   }
 
   &.gls-error {
-    // border-color: rgba(182, 42, 61, 0.8);
-    background-color: rgba(182, 3, 27, 0.91);
+    border: none;
+    background-color: rgba(255, 0, 0, 0.50);
+    // box-shadow: 0 0 2px 0 red;
+    // border: solid red 1px;
+  }
+}
+
+// Alert with icons
+.gls-alert.gls-has-icon {
+  display: flex;
+  & > i {
+    display: block;
+    margin-right: 1rem;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+// Descriptions and actions
+.gls-alert {
+
+  & .gls-description {
+    margin: 0.5rem 0;
+  }
+  & .gls-actions {
+    margin: 0.5rem 0;
   }
 }
