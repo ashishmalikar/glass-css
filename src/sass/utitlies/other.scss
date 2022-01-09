@@ -1,0 +1,43 @@
+@import "../constants.scss";
+
+$ns: $ds-namespace;
+
+.#{$ns}-text-wrap {
+  word-wrap: break-word;
+}
+
+.#{$ns}-shadow-border {
+  box-shadow: 0 0 1px 0px black;
+}
+
+.#{$ns}-transparent {
+  border: none;
+  box-shadow: none;
+  background: inherit;
+  background-color: inherit;
+  opacity: inherit;
+}
+
+.#{$ns}-placeholder {
+
+}
+
+.#{$ns}-rounded {
+  border-radius: 0.5rem;
+}
+
+.#{$ns}-square {
+  border-radius: 0;
+}
+
+.#{$ns}-top-attached {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 0;
+}
+
+.#{$ns}-bottom-attached {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: 0;
+}

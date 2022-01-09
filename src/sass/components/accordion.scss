@@ -1,100 +1,113 @@
-.gls-accordion {
-  border: solid rgba(240, 234, 234, 0.486) 1px;
+@import "../constants.scss";
+@import "../base/global-variables.scss";
+
+$block: #{$ns}-accordion;
+$block-section: #{$ns}-section;
+$block-section-title: #{$ns}-title;
+$block-section-content: #{$ns}-content;
+
+$accordion-border-radius: $border-radius;
+
+.#{$block} {
+  box-shadow: 0 0 2px 0 $black;
   min-height: 10vh;
-  border-radius: 12px;
+  border-radius: $accordion-border-radius;
   display: flex;
   flex-direction: column;
   transition: all 500ms;
-  // background: transparent;
-  // backdrop-filter: blur(10px) saturate(0.5);
+  background-color: rgba($color: #ffffff, $alpha: .65);
+  backdrop-filter: blur(8px) saturate(50%);
 
-  & .gls-accordion-item-title {
-    background: transparent;
-    backdrop-filter: blur(20px) saturate(0.1);
-    color: white;
-  }
-
-  & .gls-accordion-item-content {
-    background: transparent;
-    backdrop-filter: blur(15px) saturate(0.5);
-    color: white;
+  & > .#{$block-section} {
+    transition: all 500ms;
+    & > .#{$block-section-title}{
+      background: transparent;
+      backdrop-filter: blur(20px) saturate(0.1);
+      cursor: pointer;
+      margin: 1rem;
+      // margin-bottom: 0;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      box-shadow: 0 0 2px 0 black;
+    }
+    
+    & > .#{$block-section-content}{
+      display: none;
+      margin: 1rem;
+      // box-shadow: 0 0 2px 0 black;
+      margin-top: 0;
+      // border-bottom-left-radius: 0.5rem;
+      // border-bottom-right-radius: 0.5rem;
+      &:is(.gls-is-active) {
+        display: block;
+      }
+    }
   }
   
 
-  &.gls-raised {
+  &.gls-is-raised {
     box-shadow: 0px 0px 10px 1px rgba(22, 22, 22, 0.486);
   }
 
-  .gls-inverted {
-    & > .gls-accordion-item-title {
-      // background-color: black !important;
-    }
-  }
-
-  & .gls-accordion-item {
-    transition: all 500ms;
-    &:not(.gls-active) .gls-accordion-item-content {
-      display: none;
-    }
-  }
+ 
   
 }
 
 .gls-accordion {
-  .gls-accordion-item:not(:last-child) {
-    border-bottom: solid rgba(190, 186, 186, 0.664) 1px;
-  }
+  
 
-  .gls-accordion-item:first-child {
+  .gls-section:first-child {
 
-    & .gls-accordion-item-title:first-child {
-      border-radius: 11px 11px 0px 0px;
+    & .gls-title:first-child {
+      // border-radius: $accordion-border-radius $accordion-border-radius 0px 0px;
     }
   }
 
-  & > .gls-accordion-item:last-child {
-    & .gls-accordion-item-title,
-    .gls-accordion-item-content {
-      border-radius: 0px 0px 11px 11px;
+  & > .gls-section:not(.gls-is-active):last-child {
+    & > .gls-title,
+    & > .gls-content {
+      // border-radius: 0px 0px $accordion-border-radius $accordion-border-radius;
     }
   }
 
-  // & > .gls-accordion-item {
-  //   & > .gls-accordion-item-title {
-  //     cursor: pointer;
-  //     // background-color: rgba(211, 208, 203, 0.801);
-  //     backdrop-filter: blur(10px) saturate(0.1) !important;
-  //     background: transparent;
-  //     &:hover {
-  //       background-color: rgba(160, 158, 155, 0.801);
-  //     }
-  //   }
+  & > .gls-section:is(.gls-is-active):last-child {
+    & > .gls-content {
+      // border-radius: 0px 0px $accordion-border-radius $accordion-border-radius;
+    }
+  }
 
-  // }
+  & > .gls-section {
+    & > .gls-title {
+      cursor: pointer;
+      // background-color: rgba(211, 208, 203, 0.801);
+      backdrop-filter: blur(10px) saturate(0.1) !important;
+      background: transparent;
+      &:hover {
+        // background-color: rgba(179, 179, 179, 0.801);
+      }
+    }
+
+  }
+  .gls-section:not(:last-child) {
+    // border-bottom: solid rgba(190, 186, 186, 0.664) 1px;
+    border-radius: 0;
+  }
 }
 
-.gls-accordion .gls-accordion-item {
+.gls-accordion .gls-section {
   
-  .gls-accordion-item-title, 
-  .gls-accordion-item-content {    
+  & > .gls-title, 
+  & > .gls-content {    
     padding: 0.6em 0.5em;
   }
 
-//   .gls-accordion-item-title {
-//     // background-color: #a09e9ebd;
-//     // backdrop-filter: blur(5px);
-//     display: flex;
-//   }
+  & > .gls-title {
+    backdrop-filter: blur(5px);
+    display: flex;
+  }
 
-//   .gls-accordion-item-content {    
-//     padding: 0.6em 0.5em;
-//     transition: all 500ms;
-//     // background-color: #f5f4f183;
-//     // backdrop-filter: blur(5px);
-//     // box-shadow: inset 0px 0px 2px 1px rgba(22, 22, 22, 0.486);
-//   }
+  & > .gls-content {    
+    padding: 0.6em 0.5em;
+    transition: all 500ms;
+  }
 }
-
-
-
-

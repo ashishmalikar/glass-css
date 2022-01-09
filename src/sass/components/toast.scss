@@ -20,20 +20,32 @@ $block: #{$ns}-toast;
 // color schemas 
 $success-toast-background-color: green;
 $info-toast-background-color: #276f86;
-$warning-toast-background-color: #fffaf3;
+$warning-toast-background-color: #d68615;
 $error-toast-background-color: #9f3a38;
 
-.#{$block} {
-  width: 500px;
+.gls-toast-container {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   z-index: 1002;
+  // border: solid black 1px;
+  width: 500px;
+  // background: red;
   top: 0;
   right: 0;
+  margin-top: 3rem;
+  margin-right: 1rem;
+}
+
+.#{$block} {
   margin: 1rem;
   background-color: #e5e4e2;
   border-radius: 0.5rem;
   border: solid black 1px;
-  display: none;
+  display: block;
+  // padding: 1rem;
+  display: flex; 
+  flex-direction: column;
 
   &:is(.gls-is-active) {
     display: block;
@@ -41,6 +53,7 @@ $error-toast-background-color: #9f3a38;
 
   &:is(.gls-is-success) {
     background-color: $success-toast-background-color;
+    color: white;
   }
   &:is(.gls-is-info) {
     background-color: $info-toast-background-color;
@@ -53,14 +66,42 @@ $error-toast-background-color: #9f3a38;
     color: white;
   }
 
-  & .gls-content {
+  & .gls-header-content {
     display: flex;
-    flex-direction: column;
-    border-radius: inherit;
-    box-shadow: 0 0 10px 2px rgba(65, 64, 64, 0.705);
-    height: 4rem;
-    
+    flex-direction: row;
+    // border-radius: inherit;
+    // box-shadow: 0 0 10px 2px rgba(65, 64, 64, 0.705);
+    // height: 4rem;
+    padding: 0.5rem;
+    border-bottom: solid 1px #e5e4e2;
+    & .gls-right-content {
+      margin-left: auto;
+    }
   }
+
+  & .gls-body-content {
+    // border-bottom: solid 1px #e5e4e2;
+    border-bottom: none;
+    padding: 0.5rem;
+  }
+
+  & .gls-progress-bar {
+    height: 5px;
+    background-color: white;
+    margin-bottom: 0px;
+    margin: 0rem .08132121rem;
+    border-bottom-right-radius: 200px;
+    border-bottom-left-radius: 200px;
+
+    & .gls-progress {
+      height: 100%;
+      width: 30%;
+      background-color: red;
+      animation: progressBar 3s ease-in-out;
+      animation-fill-mode:both; 
+    }
+  }
+
   & .gls-toast-msg {
     /* padding: 0.2rem 1rem; */
     margin: auto;
@@ -72,4 +113,10 @@ $error-toast-background-color: #9f3a38;
     margin-right: 10px;
     margin-top: 0px;
   }
+}
+
+@keyframes progressBar {
+  0% { width: 0; }
+  100% { width: 100%; }
+  0% { width: 0%; }
 }

@@ -1,0 +1,13 @@
+@import "../constants.scss";
+
+$ns: $ds-namespace;
+
+// $scales: ms s;
+
+// @each $scale in $scales {
+  
+// }
+
+.#{$ns}-transition {
+  transition: all 500ms;
+}

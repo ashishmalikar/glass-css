@@ -66,6 +66,11 @@ $block: #{$ns}-header;
     vertical-align: middle;
   }
 
+  &:is(.gls-is-dark) {
+    background-color: rgba(17, 25, 40, 0.75);
+    color: white;
+  }
+
   /*******************************
             Types
   *******************************/
@@ -225,10 +230,37 @@ $block: #{$ns}-header;
     padding: 0.78571429rem 1rem;
     -webkit-box-shadow: none;
             box-shadow: none;
-    border: 1px solid #D4D4D5;
-    border-radius: 0.28571429rem;
-    margin: 0.6em;
+    // border: 1px solid #D4D4D5;
+    // border-radius: 0.28571429rem;
+    border-radius: $border-radius;
+    // margin: 0.6em;
+    box-shadow: 0 0 1px 0 black; 
   }
+
+  &:is(.gls-is-dark) {
+    color: white;
+    &.#{$ns}-block {
+      background-color: rgba(17, 25, 40, 0.75);
+      padding: 0.78571429rem 1rem;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      // border: 1px solid #D4D4D5;
+      // border-radius: 0.28571429rem;
+      border-radius: $border-radius;
+      // margin: 0.6em;
+      box-shadow: 0 0 1px 0 black; 
+      color: white;
+    }
+
+    & > .gls-content {
+      color: white;
+
+      & > .gls-sub-header {
+        color: white;
+      }
+    }
+  }
+
   &.#{$ns}-block {
     font-size: 0.85714286rem;
   }
