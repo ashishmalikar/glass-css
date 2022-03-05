@@ -1,37 +1,30 @@
 @import "../constants.scss";
+@import "../base/global-variables.scss";
 
 // Variant color scope declarations
-$variant-default-color: #cdd7e0;
-// $primary-color: #2e5090;
-// $primary-color: #013fb4;
+$variant-default-color: #f1f1f1;
 $primary-color-hover: rgb(39, 68, 129);
 $variant-error-color: rgb(177, 48, 59);
 $variant-secondary-color: rgba(44, 43, 53, 0.877);
-
 $success-button-background-color: green;
-
-// $button-border-radius: $border-radius;
-// $button-border-radius: 0.5rem;
 $button-border-radius: 5px;
-// $button-border-radius: 0;
 $button-group-border-radius: 5px;
 
 .gls-button {
-  // box-shadow: $box-shadow-light;
   border-radius: $button-border-radius;
-  padding: .6em .9em;
+  // padding: .6em 1em;
+  padding: 0.4rem 0.9rem;
   cursor: pointer;
   display: inline-block;
   min-height: 1em;
   outline: none;
-  // border: none;
   vertical-align: baseline;
-  color: rgba(0, 0, 0, 0.6);
+  color: $black;
   margin: 0em 0.25em 0em 0em;
   text-transform: none;
   text-shadow: none;
   font-weight: bold;
-  line-height: 1em;
+  line-height: 1.25em;
   font-style: normal;
   text-align: center;
   text-decoration: none;
@@ -45,69 +38,47 @@ $button-group-border-radius: 5px;
   transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
   will-change: '';
   -webkit-tap-highlight-color: transparent;
-  background: $variant-default-color none;
+  background: $default-bg none;
   border-width: 1px;
   border-style: solid;
+  // color: white;
+  // font-family: 'Segoe UI';
 
-  &:is(.gls-is-fluid) {
+  &.gls-has-shadow {
+    box-shadow: $box-shadow-light;
+  }
+
+  &.gls-is-fluid {
     width: 100%;
   }
   
   &:active {
     box-shadow: none;
-    // transform: translateY(2px);
   }
-
-  &.gls-basic {
-    background: transparent;
-    border-color: $variant-default-color;
-    outline: $variant-default-color;
-    border-width: 1px;
-  }
-
-  &:hover {
-    background-image: linear-gradient(#9ea6ad, #cdd1d4);
-  }
+  
+  /******************
+    Variants  
+  *******************/
   &.gls-is-primary {
 
     border-color: $primary-color;
     color: $primary-color;
 
-    &:is(.gls-is-solid) {
+    &.gls-is-solid {
       background-color: $primary-color; 
-      color: #d1d9e0;
-      &:hover {
-        background-color: $primary-color-hover; /*for compatibility with older browsers*/
-        background-image: linear-gradient($primary-color-hover,rgb(71, 113, 148));
-      }
-    }
-    
-    &:hover {
-      background-color: $primary-color-hover; /*for compatibility with older browsers*/
-      background-image: linear-gradient($primary-color-hover,rgb(127, 152, 173));
-      color: #d1d9e0;
+      color: $white;
     }
   }
   &.gls-is-secondary {
-      // background: transparent;
       border-color: $variant-secondary-color;
       color: $variant-secondary-color;
-      &:hover {
-        background-color: rgba(70, 70, 77, 0.877); /*for compatibility with older browsers*/
-        background-image: linear-gradient(rgba(70, 70, 77, 0.877),rgba(157, 157, 187, 0.877));
-        color: #d1d9e0;
-      }
       &:active {
         background-color: black;
         color: white;
       }
-      &:is(.gls-is-solid) {
+      &.gls-is-solid {
         background-color: $variant-secondary-color; 
-        color: #d1d9e0;
-        &:hover {
-          background-color: rgba(9, 9, 15, 0.877); /*for compatibility with older browsers*/
-          background-image: linear-gradient(rgba(9, 9, 15, 0.877),rgba(39, 39, 48, 0.877));
-        }
+        color: $white;
       }
   }
   &.gls-is-error {
@@ -115,22 +86,12 @@ $button-group-border-radius: 5px;
     &:not(.gls-solid) {
       color: $variant-error-color;
       border-color: $variant-error-color;
-      &:hover {
-        background-color: variant-error-color; /*for compatibility with older browsers*/
-        background-image: linear-gradient(rgb(112, 34, 40),rgb(146, 81, 87));
-        color: white;
-      }
     }
 
     &:is(.gls-is-solid) {
       border-color: rgb(177, 48, 59);
       color: #fff;
       background-color: $variant-error-color;
-      &:hover {
-        background-color: rgb(177, 48, 59); /*for compatibility with older browsers*/
-        background-image: linear-gradient(rgb(112, 34, 40),rgb(206, 116, 125));
-        color: #d1d9e0;
-      }
     }
   }
 
@@ -139,45 +100,32 @@ $button-group-border-radius: 5px;
     &:not(.gls-solid) {
       color: $success-button-background-color;
       border-color: $success-button-background-color;
-      &:hover {
-        background-color: $success-button-background-color; /*for compatibility with older browsers*/
-        background-image: linear-gradient($success-button-background-color,rgb(138, 224, 142));
-        color: white;
-      }
     }
 
     &:is(.gls-is-solid) {
       border-color: $success-button-background-color;
       color: #fff;
       background-color: $success-button-background-color;
-      &:hover {
-        background-color: $success-button-background-color; /*for compatibility with older browsers*/
-        background-image: linear-gradient($success-button-background-color,rgb(138, 224, 142));
-        color: #d1d9e0;
-      }
     }
   }
 }
 
 .gls-button-group {
-  // box-shadow: 0px 4px 4px rgba(49, 46, 46, 0.521);
   border-radius: $button-border-radius;
   display: flex;
   flex-direction: row;
-  // border-style: solid;
-  //   border-width: 1px;
 
-  & .gls-button {
-    // border: none;
+  & .gls-button:not(:only-child) {
     margin: 0px;
     box-shadow: none;
     border-radius: 0px;
     border-right: $box-solid-border;
   }
-  & .gls-button:first-child {
+
+  & .gls-button:not(:only-child):first-child {
     border-radius: $button-border-radius 0 0px $button-border-radius;
   }
-  & .gls-button:last-child {
+  & .gls-button:not(:only-child):last-child {
     border-radius: 0px $button-border-radius $button-border-radius 0px;
   }
 
@@ -234,9 +182,4 @@ $button-group-border-radius: 5px;
 .gls-button:disabled {
   cursor: not-allowed;
   background-color: rgb(229, 229, 229) !important;
-}
-
-.gls-button.gls-is-disabled:hover, 
-.gls-button:disabled:hover {
-  background-color: inherit;
 }

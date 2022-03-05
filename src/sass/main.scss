@@ -18,17 +18,17 @@ html, body {
   box-sizing: content-box;
   // font-family: 'Work Sans',ans-serif;
   // font-family: 'Open-sans', sans-serif;
-  // font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   // font-family: 'Segoe UI', sans-serif;
   // font-family: 'Segoe WP N', sans-serif;
   // font-family: 'Segoe S', sans-serif;
-  font-family: 'Segoe SD', sans-serif;
+  // font-family: 'Segoe SD', sans-serif;
   // font-family: 'Oswald', sans-serif;
-  font-size: 16px;
+  // font-size: 16px;
   line-height: 1.5em;
 }
 
-@import "../sass/components/all";
+// @import "../sass/components/__all";
 
 // Importing icons
 @import "../iconfont/tabler-icons-2.scss";
@@ -36,5 +36,5 @@ html, body {
 //utilities
 @import "./utitlies/api.scss";
 @import "./utitlies/other.scss";
-
+@import "./utitlies/colors.scss"
 

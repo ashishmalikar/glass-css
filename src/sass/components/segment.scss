@@ -5,32 +5,10 @@ $ns: $ds-namespace;
 .gls-segment {
   position: relative;
   border-radius: $border-radius;
-  // border-radius: 1rem;;
   padding: 1em;
-
-  -webkit-box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.39), 0px 2px 10px 0px rgba(240, 243, 247, 0.39);
-          box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.39), 0px 2px 10px 0px rgba(233, 236, 238, 0.39);
-
-  backdrop-filter: blur(150px) saturate(180%);
-  -webkit-backdrop-filter: blur(150px) saturate(180%);
-  
-  background-color: rgba(255, 255, 255, 0.65);
-  border: 1px solid rgba(209, 213, 219, 0.3);
-
-  &:is(.gls-theme-dark){
-    backdrop-filter: blur(150px) saturate(180%);
-    -webkit-backdrop-filter: blur(150px) saturate(180%);
-    background-color: rgba(17, 25, 40, 0.65);
-    border: 1px solid rgba(255, 255, 255, 0.125);
-
-    -webkit-box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.39), 0px 2px 10px 0px rgba(248, 244, 244, 0.39);
-          box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.39), 0px 2px 10px 0px rgba(248, 246, 246, 0.39);
-    color: white;
-
-    & * {
-      color: white; 
-    }
-  }
+  // background-color: #ffffff94;
+  background-color: #fff;
+  box-shadow: 0 0 2px 0 black;
 
   &:first-child {
     margin-top: 0em;
@@ -45,5 +23,9 @@ $ns: $ds-namespace;
     border-top-right-radius: 0 !important;
   }
 
-  // box-shadow: 0 0 5px 1px skyblue;
+  & .gls-menu {
+    box-shadow: 0 0 1px 0 black;
+    margin: -0.5rem;
+    margin-bottom: 0.5rem;
+  }
 }

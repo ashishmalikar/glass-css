@@ -1,0 +1,248 @@
+/*******************************
+            Standard
+*******************************/
+
+
+/*--------------
+    Comments
+---------------*/
+
+.gls-comments {
+  margin: 1.5em 0em;
+  max-width: 650px;
+}
+.gls-comments:first-child {
+  margin-top: 0em;
+}
+.gls-comments:last-child {
+  margin-bottom: 0em;
+}
+
+/*--------------
+     Comment
+---------------*/
+
+.gls-comments .gls-comment {
+  position: relative;
+  background: none;
+  margin: 0.5em 0em 0em;
+  padding: 0.5em 0em 0em;
+  border: none;
+  border-top: none;
+  line-height: 1.2;
+}
+.gls-comments .gls-comment:first-child {
+  margin-top: 0em;
+  padding-top: 0em;
+}
+
+/*--------------------
+    Nested Comments
+---------------------*/
+
+.gls-comments .gls-comment .gls-comments {
+  margin: 0em 0em 0.5em 0.5em;
+  padding: 1em 0em 1em 1em;
+}
+.gls-comments .gls-comment .gls-comments:before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.gls-comments .gls-comment .gls-comments .gls-comment {
+  border: none;
+  border-top: none;
+  background: none;
+}
+
+/*--------------
+     Avatar
+---------------*/
+
+.gls-comments .gls-comment .gls-avatar {
+  display: block;
+  width: 2.5em;
+  height: auto;
+  float: left;
+  margin: 0.2em 0em 0em;
+}
+.gls-comments .gls-comment img.gls-avatar,
+.gls-comments .gls-comment .gls-avatar img {
+  display: block;
+  margin: 0em auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+}
+
+/*--------------
+     Content
+---------------*/
+
+.gls-comments .gls-comment > .gls-content {
+  display: block;
+}
+
+/* If there is an avatar move content over */
+.gls-comments .gls-comment > .gls-avatar ~ .gls-content {
+  margin-left: 3.5em;
+}
+
+/*--------------
+     Author
+---------------*/
+
+.gls-comments .gls-comment .author {
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: bold;
+}
+.gls-comments .gls-comment a.author {
+  cursor: pointer;
+}
+.gls-comments .gls-comment a.author:hover {
+  color: #1e70bf;
+}
+
+/*--------------
+     Metadata
+---------------*/
+
+.gls-comments .gls-comment .gls-metadata {
+  display: inline-block;
+  margin-left: 0.5em;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 0.875em;
+}
+.gls-comments .gls-comment .gls-metadata > * {
+  display: inline-block;
+  margin: 0em 0.5em 0em 0em;
+}
+.gls-comments .gls-comment .gls-metadata > :last-child {
+  margin-right: 0em;
+}
+
+/*--------------------
+     Comment Text
+---------------------*/
+
+.gls-comments .gls-comment .gls-text {
+  margin: 0.25em 0em 0.5em;
+  font-size: 1em;
+  word-wrap: break-word;
+  color: rgba(0, 0, 0, 0.87);
+  line-height: 1.3;
+}
+
+/*--------------------
+     User Actions
+---------------------*/
+
+.gls-comments .gls-comment .gls-actions {
+  font-size: 0.875em;
+}
+.gls-comments .gls-comment .gls-actions a {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0em 0.75em 0em 0em;
+  color: rgba(0, 0, 0, 0.4);
+}
+.gls-comments .gls-comment .gls-actions a:last-child {
+  margin-right: 0em;
+}
+.gls-comments .gls-comment .gls-actions a.gls-is-active,
+.gls-comments .gls-comment .gls-actions a:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/*--------------------
+      Reply Form
+---------------------*/
+
+.gls-comments > .gls-is-reply.gls-form {
+  margin-top: 1em;
+}
+.gls-comments .gls-comment .gls-is-reply.gls-form {
+  width: 100%;
+  margin-top: 1em;
+}
+.gls-comments .gls-is-reply.gls-form textarea {
+  font-size: 1em;
+  height: 12em;
+}
+
+
+/*******************************
+            State
+*******************************/
+
+.gls-collapsed.gls-comments,
+.gls-comments .collapsed.gls-comments,
+.gls-comments .collapsed.gls-comment {
+  display: none;
+}
+
+
+/*******************************
+           Variations
+*******************************/
+
+
+/*--------------------
+        Threaded
+---------------------*/
+
+.gls-threaded.gls-comments .gls-comment .gls-comments {
+  margin: -1.5em 0 -1em 1.25em;
+  padding: 3em 0em 2em 2.25em;
+  -webkit-box-shadow: -1px 0px 0px rgba(34, 36, 38, 0.15);
+          box-shadow: -1px 0px 0px rgba(34, 36, 38, 0.15);
+}
+
+/*--------------------
+        Minimal
+---------------------*/
+
+.gls-minimal.gls-comments .gls-comment .gls-actions {
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: auto;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+.gls-minimal.gls-comments .gls-comment > .gls-content:hover > .gls-actions {
+  opacity: 1;
+}
+
+/*-------------------
+        Sizes
+--------------------*/
+
+.gls-mini.gls-comments {
+  font-size: 0.78571429rem;
+}
+.gls-tiny.gls-comments {
+  font-size: 0.85714286rem;
+}
+.gls-small.gls-comments {
+  font-size: 0.92857143rem;
+}
+.gls-comments {
+  font-size: 1rem;
+}
+.gls-large.gls-comments {
+  font-size: 1.14285714rem;
+}
+.gls-big.gls-comments {
+  font-size: 1.28571429rem;
+}
+.gls-huge.gls-comments {
+  font-size: 1.42857143rem;
+}
+.gls-massive.gls-comments {
+  font-size: 1.71428571rem;
+}

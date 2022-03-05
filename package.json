@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "node-sass src/sass/main.scss dist/css/glass-ui.css -w"
+    "sass": "node-sass src/sass/main.scss dist/css/glass-ui.css -w --output-style"
   },
   "repository": {
     "type": "git",

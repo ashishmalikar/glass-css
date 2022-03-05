@@ -37,6 +37,12 @@
     margin: 0;
   }
 
+  // Default width
+  & > .gls-col,
+  & > .gls-row > .gls-col {
+    width: 100%;
+  }
+
   &:not([class*=cols]) {
     .gls-row > .gls-col,
     .gls-col {
@@ -44,7 +50,7 @@
       position: relative;
     }
     
-    @for $i from 2 to 17 {
+    @for $i from 1 to 17 {
       @for $j from 1 to $i {
         .gls-row > .gls-col.gls-size__#{$j}-of-#{$i},
         .gls-col.gls-size__#{$j}-of-#{$i} {
