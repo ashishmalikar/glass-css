@@ -15,83 +15,33 @@ $accordion-border-radius: $border-radius;
   display: flex;
   flex-direction: column;
   transition: all 500ms;
-  background-color: rgba($color: #ffffff, $alpha: .65);
-  backdrop-filter: blur(8px) saturate(50%);
+  // background-color: rgba($color: #fff, $alpha: .515);
+  background-color: #fff;
 
   & > .#{$block-section} {
     transition: all 500ms;
     & > .#{$block-section-title}{
-      background: transparent;
-      backdrop-filter: blur(20px) saturate(0.1);
+      // background: rgba($color: #dad1d1, $alpha: .818);
+      // backdrop-filter: blur(20px) saturate(0.1);
+      background-color: #dad1d1;
       cursor: pointer;
-      margin: 1rem;
-      // margin-bottom: 0;
+      margin: 0.5rem;
       border-radius: 0.5rem;
       font-weight: bold;
-      box-shadow: 0 0 2px 0 black;
     }
     
     & > .#{$block-section-content}{
       display: none;
-      margin: 1rem;
-      // box-shadow: 0 0 2px 0 black;
       margin-top: 0;
-      // border-bottom-left-radius: 0.5rem;
-      // border-bottom-right-radius: 0.5rem;
       &:is(.gls-is-active) {
         display: block;
       }
     }
   }
-  
 
   &.gls-is-raised {
     box-shadow: 0px 0px 10px 1px rgba(22, 22, 22, 0.486);
-  }
-
- 
-  
-}
-
-.gls-accordion {
-  
-
-  .gls-section:first-child {
-
-    & .gls-title:first-child {
-      // border-radius: $accordion-border-radius $accordion-border-radius 0px 0px;
-    }
-  }
-
-  & > .gls-section:not(.gls-is-active):last-child {
-    & > .gls-title,
-    & > .gls-content {
-      // border-radius: 0px 0px $accordion-border-radius $accordion-border-radius;
-    }
-  }
-
-  & > .gls-section:is(.gls-is-active):last-child {
-    & > .gls-content {
-      // border-radius: 0px 0px $accordion-border-radius $accordion-border-radius;
-    }
-  }
-
-  & > .gls-section {
-    & > .gls-title {
-      cursor: pointer;
-      // background-color: rgba(211, 208, 203, 0.801);
-      backdrop-filter: blur(10px) saturate(0.1) !important;
-      background: transparent;
-      &:hover {
-        // background-color: rgba(179, 179, 179, 0.801);
-      }
-    }
-
-  }
-  .gls-section:not(:last-child) {
-    // border-bottom: solid rgba(190, 186, 186, 0.664) 1px;
-    border-radius: 0;
-  }
+  }  
 }
 
 .gls-accordion .gls-section {

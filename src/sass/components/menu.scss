@@ -8,19 +8,20 @@ $block: #{$ns}-menu;
   display: -ms-flexbox;
   display: flex;
   
-  background-color: rgba(255,255,255, 0.65);
+  // background-color: rgba(255,255,255, 0.65);
+  background-color: #fff;
   min-height: 2em;
   border-radius: $border-radius;
   margin: 0.2em;
-  backdrop-filter: blur(2px);
+  // backdrop-filter: blur(2px);
 
   // border: solid grey 1px;
 
   box-shadow: 0px 0px 10px 1px rgba(22, 22, 22, 0.521);
-  backdrop-filter: blur(150px) saturate(180%);
-  -webkit-backdrop-filter: blur(1w0px) saturate(180%);
+  // backdrop-filter: blur(2px) saturate(50%);
+  // -webkit-backdrop-filter: blur(2px) saturate(50%);
   
-  background-color: rgba(255, 255, 255, 0.65);
+  // background-color: rgba(255, 255, 255, 0.65);
   border: 1px solid rgba(209, 213, 219, 0.3);
 
   &:is(.gls-top-attached) {
@@ -85,6 +86,9 @@ $block: #{$ns}-menu;
   & .gls-right-menu {
     margin-left: auto;
     display: inline-flex;
+    & .gls-sub-header {
+      text-align: right;
+    }
   }
 
 }
@@ -138,11 +142,13 @@ $block: #{$ns}-menu;
   }
 }
 
-.gls-menu > .gls-item:first-child {
+.gls-menu > .gls-item:first-child,
+.gls-menu > .gls-right-menu > .gls-item:first-child {
   border-radius: $border-radius 0px 0px $border-radius;
 }
 
-.gls-menu > .gls-item:last-child {
+.gls-menu > .gls-item:last-child,
+.gls-menu > .gls-right-menu > .gls-item:last-child {
   border-radius: 0 $border-radius $border-radius 0;
 }
 
@@ -430,14 +436,6 @@ $block: #{$ns}-menu;
 .gls-menu .gls-borderless.gls-item:before {
   background: none !important;
 }
-
-/* Button Item */
-
-// .gls-menu .gls-item {
-  // & .gls-btn {
-  //   margin: .901em;
-  // }
-// }
 
 .gls-menu > * .gls-menu {
   margin: 0px;

@@ -52,9 +52,19 @@ $block: #{$ns}-form;
 
     // required fields
     &.#{$ns}-is-required {
-      & label::after {
+      & label::before {
         content: '*';
         color: rgba(216, 30, 30, 0.781);
+        top: 5px;
+        font-weight: bold;
+        font-size: large;
+      }
+    }
+
+    // required error
+    &.#{$ns}-is-error {
+      input {
+        border-color: red;
       }
     }
 
@@ -73,7 +83,6 @@ $block: #{$ns}-form;
       margin: 0em;
       outline: none;
       -webkit-appearance: none;
-      tap-highlight-color: rgba(255, 255, 255, 0);
       line-height: 1.8rem;
       font-size: 1em;
       background: #FFFFFF;
@@ -81,8 +90,6 @@ $block: #{$ns}-form;
       box-shadow: 0 0 1px 0 black;
       color: rgba(0, 0, 0, 0.87);
       border-radius: 0.28571429rem;
-      // -webkit-box-shadow: 0em 0em 0em 0em transparent inset;
-      //         box-shadow: 0em 0em 0em 0em transparent inset;
       -webkit-transition: color 0.1s ease, border-color 0.1s ease;
       transition: color 0.1s ease, border-color 0.1s ease;
     }
@@ -91,8 +98,6 @@ $block: #{$ns}-form;
     & textarea {
       margin: 0em;
       -webkit-appearance: none;
-      tap-highlight-color: rgba(255, 255, 255, 0);
-      // padding: 0.78571429em 1em;
       background: #FFFFFF;
       border: 1px solid rgba(34, 36, 38, 0.15);
       outline: none;
@@ -105,6 +110,8 @@ $block: #{$ns}-form;
       font-size: 1em;
       line-height: 1.2857;
       resize: vertical;
+      width: 100%;
+      padding: 0.3rem 0 0 0.3rem;
     }
 
     & textarea:not([rows]) {
@@ -116,6 +123,12 @@ $block: #{$ns}-form;
     & textarea,
     input[type="checkbox"] {
       vertical-align: top;
+    }
+
+    & input[type="checkbox"] {
+      height: 20px;
+      width: 20px;
+      margin: 0 1rem;
     }
 
     &.#{$ns}-actions.gls-center-aligned, .#{$ns}-actions > * {
@@ -148,6 +161,5 @@ $block: #{$ns}-form;
         display: inline-block;
       }
     }
-
   }
 }

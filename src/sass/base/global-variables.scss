@@ -13,6 +13,7 @@ $white:             #ffffff !default;
 $yinman-blue:       #2e5090 !default;
 $blue:              #0000FF !default;
 $gray:              #555555 !default;
+$grey:              #808080 !default;
 $green:             #00FF00 !default;
 $purple:            #8000FF !default;
 $red:               #FF0000 !default;
@@ -20,6 +21,7 @@ $yellow:            #FFFF00 !default;
 $skyblue:           #87ceeb !default;
 
 // Variants
+$default-bg:             $bg-background !default;
 $primary:             $yinman-blue !default;
 $success:             $green !default;
 $error:               $red !default;
@@ -32,3 +34,4 @@ $border-radius-small: 0.2857rem !default;
 $border-radius-large: 1rem !default;
 
 //
+$backdrop-filter: blur(5px) saturate(50%);
