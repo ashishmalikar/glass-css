@@ -1,0 +1,96 @@
+@import "../base/global-variables.scss";
+
+.#{$ns}-m-auto{ margin: auto; }
+.#{$ns}-ml-auto{ margin-left: auto; }
+.#{$ns}-mr-auto{ margin-right: auto; }
+.#{$ns}-mt-auto{ margin-top: auto; }
+.#{$ns}-mb-auto{ margin-bottom: auto; }
+
+.#{$ns}-m0{ margin:0 }
+.#{$ns}-mt0{ margin-top:0 }
+.#{$ns}-mr0{ margin-right:0 }
+.#{$ns}-mb0{ margin-bottom:0 }
+.#{$ns}-ml0{ margin-left:0 }
+.#{$ns}-mx0{ margin-left:0; margin-right:0 }
+.#{$ns}-my0{ margin-top:0; margin-bottom:0 }
+
+.#{$ns}-m1{ margin: .5rem }
+.#{$ns}-mt1{ margin-top: .5rem }
+.#{$ns}-mr1{ margin-right: .5rem }
+.#{$ns}-mb1{ margin-bottom: .5rem }
+.#{$ns}-ml1{ margin-left: .5rem }
+.#{$ns}-mx1{ margin-left: .5rem; margin-right: .5rem }
+.#{$ns}-my1{ margin-top: .5rem; margin-bottom: .5rem }
+
+.#{$ns}-m2{ margin: 1rem }
+.#{$ns}-mt2{ margin-top: 1rem }
+.#{$ns}-mr2{ margin-right: 1rem }
+.#{$ns}-mb2{ margin-bottom: 1rem }
+.#{$ns}-ml2{ margin-left: 1rem }
+.#{$ns}-mx2{ margin-left: 1rem; margin-right: 1rem }
+.#{$ns}-my2{ margin-top: 1rem; margin-bottom: 1rem }
+
+.#{$ns}-m3{ margin: 2rem }
+.#{$ns}-mt3{ margin-top: 2rem }
+.#{$ns}-mr3{ margin-right: 2rem }
+.#{$ns}-mb3{ margin-bottom: 2rem }
+.#{$ns}-ml3{ margin-left: 2rem }
+.#{$ns}-mx3{ margin-left: 2rem; margin-right: 2rem }
+.#{$ns}-my3{ margin-top: 2rem; margin-bottom: 2rem }
+
+.#{$ns}-m4{ margin: 4rem }
+.#{$ns}-mt4{ margin-top: 4rem }
+.#{$ns}-mr4{ margin-right: 4rem }
+.#{$ns}-mb4{ margin-bottom: 4rem }
+.#{$ns}-ml4{ margin-left: 4rem }
+.#{$ns}-mx4{ margin-left: 4rem; margin-right: 4rem }
+.#{$ns}-my4{ margin-top: 4rem; margin-bottom: 4rem }
+
+.#{$ns}-mxn1{ margin-left: -.5rem; margin-right: -.5rem; }
+.#{$ns}-mxn2{ margin-left: -1rem; margin-right: -1rem; }
+.#{$ns}-mxn3{ margin-left: -2rem; margin-right: -2rem; }
+.#{$ns}-mxn4{ margin-left: -4rem; margin-right: -4rem; }
+
+.#{$ns}-ml-auto{ margin-left:auto }
+.#{$ns}-mr-auto{ margin-right:auto }
+.#{$ns}-mx-auto{ margin-left:auto; margin-right:auto; }
+
+.#{$ns}-p0{ padding:0 }
+.#{$ns}-pt0{ padding-top:0 }
+.#{$ns}-pr0{ padding-right:0 }
+.#{$ns}-pb0{ padding-bottom:0 }
+.#{$ns}-pl0{ padding-left:0 }
+.#{$ns}-px0{ padding-left:0; padding-right:0 }
+.#{$ns}-py0{ padding-top:0;  padding-bottom:0 }
+
+.#{$ns}-p1{ padding: .5rem }
+.#{$ns}-pt1{ padding-top: .5rem }
+.#{$ns}-pr1{ padding-right: .5rem }
+.#{$ns}-pb1{ padding-bottom: .5rem }
+.#{$ns}-pl1{ padding-left: .5rem }
+.#{$ns}-py1{ padding-top: .5rem; padding-bottom: .5rem }
+.#{$ns}-px1{ padding-left: .5rem; padding-right: .5rem }
+
+.#{$ns}-p2{ padding: 1rem }
+.#{$ns}-pt2{ padding-top: 1rem }
+.#{$ns}-pr2{ padding-right: 1rem }
+.#{$ns}-pb2{ padding-bottom: 1rem }
+.#{$ns}-pl2{ padding-left: 1rem }
+.#{$ns}-py2{ padding-top: 1rem; padding-bottom: 1rem }
+.#{$ns}-px2{ padding-left: 1rem; padding-right: 1rem }
+
+.#{$ns}-p3{ padding: 2rem }
+.#{$ns}-pt3{ padding-top: 2rem }
+.#{$ns}-pr3{ padding-right: 2rem }
+.#{$ns}-pb3{ padding-bottom: 2rem }
+.#{$ns}-pl3{ padding-left: 2rem }
+.#{$ns}-py3{ padding-top: 2rem; padding-bottom: 2rem }
+.#{$ns}-px3{ padding-left: 2rem; padding-right: 2rem }
+
+.#{$ns}-p4{ padding: 4rem }
+.#{$ns}-pt4{ padding-top: 4rem }
+.#{$ns}-pr4{ padding-right: 4rem }
+.#{$ns}-pb4{ padding-bottom: 4rem }
+.#{$ns}-pl4{ padding-left: 4rem }
+.#{$ns}-py4{ padding-top: 4rem; padding-bottom: 4rem }
+.#{$ns}-px4{ padding-left: 4rem; padding-right: 4rem }

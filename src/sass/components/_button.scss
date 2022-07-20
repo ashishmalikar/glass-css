@@ -10,9 +10,8 @@ $success-button-background-color: green;
 $button-border-radius: 5px;
 $button-group-border-radius: 5px;
 
-.gls-button {
+.#{$ns}-button {
   border-radius: $button-border-radius;
-  // padding: .6em 1em;
   padding: 0.4rem 0.9rem;
   cursor: pointer;
   display: inline-block;
@@ -44,65 +43,65 @@ $button-group-border-radius: 5px;
   // color: white;
   // font-family: 'Segoe UI';
 
-  &.gls-has-shadow {
+  &.#{$ns}-has-shadow {
     box-shadow: $box-shadow-light;
   }
 
-  &.gls-is-fluid {
+  &.#{$ns}-is-fluid {
     width: 100%;
   }
-  
+
   &:active {
     box-shadow: none;
   }
-  
+
   /******************
-    Variants  
+    Variants
   *******************/
-  &.gls-is-primary {
+  &.#{$ns}-is-primary {
 
     border-color: $primary-color;
     color: $primary-color;
 
-    &.gls-is-solid {
-      background-color: $primary-color; 
+    &.#{$ns}-is-solid {
+      background-color: $primary-color;
       color: $white;
     }
   }
-  &.gls-is-secondary {
+  &.#{$ns}-is-secondary {
       border-color: $variant-secondary-color;
       color: $variant-secondary-color;
       &:active {
         background-color: black;
         color: white;
       }
-      &.gls-is-solid {
-        background-color: $variant-secondary-color; 
+      &.#{$ns}-is-solid {
+        background-color: $variant-secondary-color;
         color: $white;
       }
   }
-  &.gls-is-error {
+  &.#{$ns}-is-error {
 
-    &:not(.gls-solid) {
+    &:not(.#{$ns}-solid) {
       color: $variant-error-color;
       border-color: $variant-error-color;
     }
 
-    &:is(.gls-is-solid) {
+    &:is(.#{$ns}-is-solid) {
       border-color: rgb(177, 48, 59);
       color: #fff;
       background-color: $variant-error-color;
     }
   }
 
-  &.gls-is-success {
+  &.#{$ns}-is-success {
 
-    &:not(.gls-solid) {
+    &:not(.#{$ns}-solid) {
       color: $success-button-background-color;
       border-color: $success-button-background-color;
     }
 
-    &:is(.gls-is-solid) {
+    &:is(.#{$ns}-is-solid) {
       border-color: $success-button-background-color;
       color: #fff;
       background-color: $success-button-background-color;
@@ -110,76 +109,76 @@ $button-group-border-radius: 5px;
   }
 }
 
-.gls-button-group {
+.#{$ns}-button-group {
   border-radius: $button-border-radius;
   display: flex;
   flex-direction: row;
 
-  & .gls-button:not(:only-child) {
+  & .#{$ns}-button:not(:only-child) {
     margin: 0px;
     box-shadow: none;
     border-radius: 0px;
     border-right: $box-solid-border;
   }
 
-  & .gls-button:not(:only-child):first-child {
+  & .#{$ns}-button:not(:only-child):first-child {
     border-radius: $button-border-radius 0 0px $button-border-radius;
   }
-  & .gls-button:not(:only-child):last-child {
+  & .#{$ns}-button:not(:only-child):last-child {
     border-radius: 0px $button-border-radius $button-border-radius 0px;
   }
 
-  &:is(.gls-is-primary) {
+  &:is(.#{$ns}-is-primary) {
     border-color: $primary-color;
     color: $primary-color;
   }
 
 }
 
-.gls-is-mini.gls-buttons .button,
-.gls-is-mini.gls-button {
+.#{$ns}-is-mini.#{$ns}-buttons .button,
+.#{$ns}-is-mini.#{$ns}-button {
   font-size: 0.78571429rem;
 }
-.gls-is-tiny.gls-buttons .gls-button,
-.gls-is-tiny.gls-button {
+.#{$ns}-is-tiny.#{$ns}-buttons .#{$ns}-button,
+.#{$ns}-is-tiny.#{$ns}-button {
   font-size: 0.85714286rem;
 }
-.gls-is-small.gls-buttons .gls-button,
-.gls-is-small.gls-button {
+.#{$ns}-is-small.#{$ns}-buttons .#{$ns}-button,
+.#{$ns}-is-small.#{$ns}-button {
   font-size: 0.92857143rem;
 }
-.gls-buttons .gls-button,
-.gls-button {
+.#{$ns}-buttons .#{$ns}-button,
+.#{$ns}-button {
   font-size: 1rem;
 }
-.gls-is-large.gls-buttons .gls-button,
-.gls-is-large.gls-button {
+.#{$ns}-is-large.#{$ns}-buttons .#{$ns}-button,
+.#{$ns}-is-large.#{$ns}-button {
   font-size: 1.14285714rem;
 }
-.gls-is-big.gls-buttons .gls-button,
-.gls-is-big.gls-button {
+.#{$ns}-is-big.#{$ns}-buttons .#{$ns}-button,
+.#{$ns}-is-big.#{$ns}-button {
   font-size: 1.28571429rem;
 }
-.gls-is-huge.gls-buttons .gls-button,
-.gls-is-huge.gls-button {
+.#{$ns}-is-huge.#{$ns}-buttons .#{$ns}-button,
+.#{$ns}-is-huge.#{$ns}-button {
   font-size: 1.42857143rem;
 }
 
-.gls-icon-button.gls-buttons .gls-button-button > .gls-icon,
-.gls-icon-button.gls-button > .gls-icon {
+.#{$ns}-icon-button.#{$ns}-buttons .#{$ns}-button-button > .#{$ns}-icon,
+.#{$ns}-icon-button.#{$ns}-button > .#{$ns}-icon {
   opacity: 0.9;
   margin: 0em !important;
   vertical-align: top;
 }
 
 /** Icon Button **/
-.gls-button.gls-icon-button.gls-is-compact,
-.gls-button-group > .gls-button.gls-icon-button.gls-is-compact {
+.#{$ns}-button.#{$ns}-icon-button.#{$ns}-is-compact,
+.#{$ns}-button-group > .#{$ns}-button.#{$ns}-icon-button.#{$ns}-is-compact {
   padding: 0.5rem;
 }
 
-.gls-button.gls-is-disabled, 
-.gls-button:disabled {
+.#{$ns}-button.#{$ns}-is-disabled,
+.#{$ns}-button:disabled {
   cursor: not-allowed;
   background-color: rgb(229, 229, 229) !important;
 }

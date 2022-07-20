@@ -1,5 +1,4 @@
 @import "../override.scss";
-// @import "./colors.scss";
 
 // Namespace - Default is gls
 $ns:                  gls !default;
@@ -8,27 +7,29 @@ $ns:                  gls !default;
 $bg-background:     #f1f1f1 !default;
 
 // Colors
-$black:             #000000 !default;
-$white:             #ffffff !default;
-$yinman-blue:       #2e5090 !default;
-$blue:              #0000FF !default;
-$gray:              #555555 !default;
-$grey:              #808080 !default;
-$green:             #00FF00 !default;
-$purple:            #8000FF !default;
-$red:               #FF0000 !default;
-$yellow:            #FFFF00 !default;
-$skyblue:           #87ceeb !default;
+$black:             #000000;
+$white:             #ffffff;
+$yinman-blue:       #2e5090;
+$blue:              #0000FF;
+$gray:              #555555;
+$grey:              #808080;
+$green:             #00FF00;
+$purple:            #8000FF;
+$red:               #FF0000;
+$yellow:            #FFFF00;
+$skyblue:           #87ceeb;
 
 // Variants
-$default-bg:             $bg-background !default;
+$default-bg:          $bg-background !default;
 $primary:             $yinman-blue !default;
+$secondary:           $black !default;
 $success:             $green !default;
 $error:               $red !default;
 $warning:             $yellow !default;
 $link:                $blue !default;
 
 // Border radius
+$border-radius-none:  0 !default;
 $border-radius:       0.5rem !default;
 $border-radius-small: 0.2857rem !default;
 $border-radius-large: 1rem !default;

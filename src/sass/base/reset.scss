@@ -1,9 +1,6 @@
 html,
 body,
 p,
-ol,
-ul,
-li,
 dl,
 dt,
 dd,
@@ -26,16 +23,20 @@ h6 {
 }
 
 // Headings
-h1,
-h2,
-h3,
-h4,
-h5,
-h6{
-  font-size: 100%;
-  font-weight: normal;
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6{
+//   font-size: 100%;
+//   font-weight: normal;
+// }
 
 ul {
-  list-style: none;
+  // list-style: none;
+}
+
+a {
+  color: #0b63a5;
 }

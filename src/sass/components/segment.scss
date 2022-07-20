@@ -6,13 +6,13 @@ $ns: $ds-namespace;
   position: relative;
   border-radius: $border-radius;
   padding: 1em;
-  // background-color: #ffffff94;
+  //background-color: #ffffff94;
   background-color: #fff;
-  box-shadow: 0 0 2px 0 black;
+  //box-shadow: 0 0 2px 0 black;
 
   &:first-child {
     margin-top: 0em;
-  }        
+  }
   &:last-child {
     margin-bottom: 0em;
   }

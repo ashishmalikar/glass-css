@@ -7,7 +7,7 @@ $block: #{$ns}-header;
   border: none;
   margin: calc(2rem -  0.14285714em ) 0em 1rem;
   padding: 0em 0em;
-  font-size: 1rem;
+  font-size: 1.28571429rem;
   line-height: 1.28571429em;
   text-transform: none;
   color: rgba(15, 15, 15, 0.87);
@@ -26,7 +26,7 @@ $block: #{$ns}-header;
     font-weight: normal;
     padding: 0em;
     margin: 0em;
-    font-size: 1.28571429rem;
+    font-size: 1rem;
     line-height: 1.2em;
     color: rgba(0, 0, 0, 0.6);
   }
@@ -79,9 +79,9 @@ $block: #{$ns}-header;
   ---------------*/
 
   &:is(h1) {
-    font-size: 1.14285714rem;
+    font-size: 2rem;
     & > * .#{$ns}-sub-header {
-      font-size: 2rem;
+      font-size: 1.14285714rem;
     }
   }
   &:is(h2) {
@@ -232,7 +232,7 @@ $block: #{$ns}-header;
     // border-radius: 0.28571429rem;
     border-radius: $border-radius;
     // margin: 0.6em;
-    box-shadow: 0 0 1px 0 black; 
+    box-shadow: 0 0 1px 0 black;
   }
 
   &:is(.gls-is-dark) {
@@ -246,7 +246,7 @@ $block: #{$ns}-header;
       // border-radius: 0.28571429rem;
       border-radius: $border-radius;
       // margin: 0.6em;
-      box-shadow: 0 0 1px 0 black; 
+      box-shadow: 0 0 1px 0 black;
       color: white;
     }
 
