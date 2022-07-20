@@ -10,21 +10,13 @@
 @import url('http://fonts.cdnfonts.com/css/segoe-wp-n');
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&family=Work+Sans&display=swap');
 
-@import "../sass/base/reset.scss";
-@import "../sass/components/all";
+@import "./base/reset.scss";
+@import "./components/all";
+@import "./utitlies/all";
 
 html, body {
-  // background-color: #b7b7bd;
   box-sizing: content-box;
-  // font-family: 'Work Sans',ans-serif;
-  // font-family: 'Open-sans', sans-serif;
   font-family: 'Roboto', sans-serif;
-  // font-family: 'Segoe UI', sans-serif;
-  // font-family: 'Segoe WP N', sans-serif;
-  // font-family: 'Segoe S', sans-serif;
-  // font-family: 'Segoe SD', sans-serif;
-  // font-family: 'Oswald', sans-serif;
-  // font-size: 16px;
   line-height: 1.5em;
 }
 
@@ -34,7 +26,6 @@ html, body {
 @import "../iconfont/tabler-icons-2.scss";
 
 //utilities
-@import "./utitlies/api.scss";
-@import "./utitlies/other.scss";
-@import "./utitlies/colors.scss"
-
+// @import "./utitlies/api.scss";
+// @import "./utitlies/other.scss";
+// @import "./utitlies/colors.scss"

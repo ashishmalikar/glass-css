@@ -9,28 +9,18 @@ $block-section-content: #{$ns}-content;
 $accordion-border-radius: $border-radius;
 
 .#{$block} {
-  box-shadow: 0 0 2px 0 $black;
-  min-height: 10vh;
-  border-radius: $accordion-border-radius;
   display: flex;
   flex-direction: column;
-  transition: all 500ms;
-  // background-color: rgba($color: #fff, $alpha: .515);
-  background-color: #fff;
-
-  & > .#{$block-section} {
+  & .#{$block-section} {
     transition: all 500ms;
-    & > .#{$block-section-title}{
-      // background: rgba($color: #dad1d1, $alpha: .818);
-      // backdrop-filter: blur(20px) saturate(0.1);
-      background-color: #dad1d1;
+    & .#{$block-section-title}{
       cursor: pointer;
       margin: 0.5rem;
-      border-radius: 0.5rem;
       font-weight: bold;
+      border-radius: 0.5rem;
     }
-    
-    & > .#{$block-section-content}{
+
+    & .#{$block-section-content}{
       display: none;
       margin-top: 0;
       &:is(.gls-is-active) {
@@ -41,22 +31,32 @@ $accordion-border-radius: $border-radius;
 
   &.gls-is-raised {
     box-shadow: 0px 0px 10px 1px rgba(22, 22, 22, 0.486);
-  }  
+  }
+}
+
+.#{$block} .gls-has-border {
+  box-shadow: 0 0 2px 0 $black;
+  border-radius: $accordion-border-radius;
+  background-color: #fff;
+  transition: all 500ms;
+   & > .#{$block-section-title}{
+      background-color: #dad1d1;
+    }
 }
 
 .gls-accordion .gls-section {
-  
-  & > .gls-title, 
-  & > .gls-content {    
+
+  & > .gls-title,
+  & > .gls-content {
     padding: 0.6em 0.5em;
   }
 
-  & > .gls-title {
+  & .gls-title {
     backdrop-filter: blur(5px);
     display: flex;
   }
 
-  & > .gls-content {    
+  & .gls-content {
     padding: 0.6em 0.5em;
     transition: all 500ms;
   }
