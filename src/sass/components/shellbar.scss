@@ -90,13 +90,12 @@ $block: #{$ns}-shellbar;
   transition: background 0.1s ease, box-shadow 0.1s ease, color 0.1s ease;
   transition: background 0.1s ease, box-shadow 0.1s ease, color 0.1s ease, -webkit-box-shadow 0.1s ease;
 
-  cursor: pointer;
-
-  &:hover {
-    opacity: 1;
-    background: #7c7c7c;
-    color: rgb(255, 255, 255);
-    border-radius: 5px;
+  & a{
+    cursor: pointer;
+    &:hover {
+      background: #7c7c7c;
+      color: rgb(255, 255, 255);  
+    }
   }
 }
 

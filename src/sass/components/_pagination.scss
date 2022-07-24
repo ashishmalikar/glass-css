@@ -1,28 +1,26 @@
 .gls-pagination {
   display: inline-flex;
   flex-direction: row;
-  // border: solid rgb(134, 130, 130) 1px;
-  background-color: honeydew;
   border-radius: 0.5rem;
+  border: solid black 1px;
+  // padding: 0.2rem;
 
   & > .gls-item {
     padding: 0.3rem 0.6rem;
     border: none;
-    // border: solid rgba(85, 87, 85, 0.712) 1px;
     cursor: pointer;
     transition: .2s;
 
-    &:hover, :is(.gls-active) {
+    &:hover, :is(.gls-is-active) {
       background-color: rgba(92, 110, 167, 0.205);
     }
     
-    &:is(.gls-active) {
-      border-bottom: solid 3px rgb(92, 109, 167);
+    &:is(.gls-is-active) {
       background-color: rgba(92, 110, 167, 0.2);
     }
 
     &:not(:last-child) {
-       border-right: none; 
+       border-right: solid #e5e4e2 1px;
     }
 
     &:is(:first-child) {
