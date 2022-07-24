@@ -1,6 +1,6 @@
 {
   "name": "@adigru/glass-ui",
-  "version": "1.0.6",
+  "version": "2.0.6",
   "description": "Glass css and ui components gives modern look and feel to your web applications.",
   "main": "src/index.js",
   "scripts": {
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ashishmalikar/glass-css.git"
+    "url": "git+https://github.com/adigru/glass-ui.git"
   },
   "keywords": [],
   "author": "Adigru",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ashishmalikar/glass-css/issues"
+    "url": "https://github.com/adigru/glass-ui.git"
   },
-  "homepage": "https://github.com/ashishmalikar/glass-css#readme",
+  "homepage": "https://github.com/adigru/glass-ui.git",
   "dependencies": {
     "node-sass": "^6.0.1",
     "postcss": "^8.3.11"
