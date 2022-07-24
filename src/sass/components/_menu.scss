@@ -12,7 +12,6 @@ $block: #{$ns}-menu;
   min-height: 2em;
   border-radius: $border-radius;
   margin: 0.2em;
-  // box-shadow: 0px 0px 10px 1px rgba(22, 22, 22, 0.521);
   border: 1px solid rgba(209, 213, 219, 0.3);
 
   &:is(.gls-top-attached) {
@@ -20,10 +19,6 @@ $block: #{$ns}-menu;
     border-bottom-left-radius: 0;
     margin: 0;
     box-shadow: none;
-    & .gls-item {
-      // border-bottom-right-radius: 0 !important;
-      // border-bottom-left-radius: 0 !important;
-    }
   }
 
   &:is(.gls-bottom-attached) {
@@ -31,10 +26,6 @@ $block: #{$ns}-menu;
     border-top-left-radius: 0;
     margin: 0;
     box-shadow: none;
-    & .gls-item {
-      // border-bottom-right-radius: 0 !important;
-      // border-bottom-left-radius: 0 !important;
-    }
   }
 
   &.gls-is-vertical {
@@ -51,20 +42,6 @@ $block: #{$ns}-menu;
     height: 0px;
     clear: both;
     visibility: hidden;
-  }
-
-  &:is(.gls-theme-dark) {
-    border-radius: $border-radius;;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-    color: white;
-    & > .gls-item,
-    & > .gls-header,
-    & > .gls-header > .gls-content,
-    & > .gls-header > .gls-content > .gls-sub-header,
-    & > .gls-item i {
-      color: white;
-      fill: white;
-    }
   }
 
   & .gls-right-menu {
@@ -103,12 +80,11 @@ $block: #{$ns}-menu;
   background: none;
   padding: 0.42857143em .814285714em;
   text-transform: none;
-  // color: rgba(0, 0, 0, 0.87);
   font-weight: normal;
-  -webkit-transition: background 0.1s ease, color 0.1s ease, -webkit-box-shadow 0.1s ease;
-  transition: background 0.1s ease, color 0.1s ease, -webkit-box-shadow 0.1s ease;
-  transition: background 0.1s ease, box-shadow 0.1s ease, color 0.1s ease;
-  transition: background 0.1s ease, box-shadow 0.1s ease, color 0.1s ease, -webkit-box-shadow 0.1s ease;
+  -webkit-transition: background 0.5s ease, color 0.5s ease, -webkit-box-shadow 0.5s ease;
+  transition: background 0.5s ease, color 0.1s ease, -webkit-box-shadow 0.5s ease;
+  transition: background 0.5s ease, box-shadow 0.1s ease, color 0.5s ease;
+  transition: background 0.5s ease, box-shadow 0.1s ease, color 0.5s ease, -webkit-box-shadow 0.5s ease;
   z-index: 101;
 }
 
@@ -118,9 +94,6 @@ $block: #{$ns}-menu;
 }
 
 .gls-menu a.gls-item:hover {
-  // background: rgb(122, 122, 117);
-  background: #0b63a5;
-  color: white;
   &:is(.gls-vertical) {
     &:first-child {
       border-top-left-radius: $border-radius;
@@ -296,7 +269,7 @@ $block: #{$ns}-menu;
 
 /* Vertical Active */
 .gls-menu.gls-vertical .gls-is-active.gls-item {
-  background: #0b63a5;
+  background: $primary-color;
   color: white;
   // border-radius: 0em;
   -webkit-box-shadow: none;
@@ -400,8 +373,7 @@ $block: #{$ns}-menu;
 
 /* Vertical Active */
 .gls-menu .gls-is-active.gls-item {
-  // background-color: rgb(255,255,255);
-  background: #0b63a5;
+  background: $primary-color;
   color: white;
   -webkit-box-shadow: none;
           box-shadow: none;
