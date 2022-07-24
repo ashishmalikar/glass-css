@@ -6,7 +6,7 @@ $breakpoints: (
   large: 1024px
 );
 
-$border-radius: 0.5rem;
+$border-radius: .3rem;
 // $border-radius: 1rem;
 $box-solid-border: solid 1px rgba(0,0,0, .534);
 $box-shadow-light: 1px 1px 15px 2px rgba(59, 59, 59, 0.384);
@@ -20,9 +20,9 @@ $variant-primary-bg-color: #495dcc;
 $variant-secondary-bg-color: #222121;
 
 $box-border-radius: 0.5rem;
-// $box-border-radius: 1rem;
 
 $primary-color: #2e5090 !default;
+// $primary-color: #ff7722 !default;
 
 // The container horizontal gap, which acts as the offset for breakpoints
 $gap: 32px !default;
